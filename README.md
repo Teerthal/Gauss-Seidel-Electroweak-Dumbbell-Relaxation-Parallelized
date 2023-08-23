@@ -109,3 +109,6 @@ We describe the parallelization scheme here:
 -This would be repeated until all the processes are busy. If there are N sublattices(processes) in a single direction, then by the time the Nth process performs the 1st iteration, the 1st process would be performing the Nth iteration.
 
 The advantage of this approach is that once all the processes have been saturated, there will be no free or unused processes until the time when global integration or data collection needs to be performed.
+
+![it1](https://github.com/Teerthal/Gauss-Seidel-Electroweak-Dumbbell-Relaxation-Parallelized/assets/95438989/a396635f-6993-422e-95c5-1fb3c85a400d|width=0.1)
+<img src="https://github.com/Teerthal/Gauss-Seidel-Electroweak-Dumbbell-Relaxation-Parallelized/assets/95438989/a396635f-6993-422e-95c5-1fb3c85a400d" width="100">
