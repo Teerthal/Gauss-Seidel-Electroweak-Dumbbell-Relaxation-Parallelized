@@ -49,7 +49,22 @@ printenergy: Collects energies from all the domains on the 0th process, adds the
 
 icMMbar,icgauge: Instantiates the initial guess field configuration and the Higgs configuration that is held fixed throughout the relaxation.
 
-The code is fully parallelized but needs a minimum of 2 processes for each physical 
+LIMITATIONS:
+
+-Needs a minimum of 2 processes in for each spatial dimension
+
+-The interval between iterations for computing energies should be larger than N^3, where N is the number of processes in a single spatial dimension
+
+-The number of processes should be cubes of integers. This can be remedied but has not been done yet.
+
+OUTPUT DATA:
+-----------
+
+The primary output is the total energy of the configuration at stated intervals until the simulation ends
+
+Commented lines in main, energy and electromagnetics can enable output of |\Phi|, energies and magnetic fields as a function of xz in the xz plane(y=0)
+
+The python scripts can read the stated format in these commented lines and produce xz-contour plots.
 
 Parallelization:
 ----------------
