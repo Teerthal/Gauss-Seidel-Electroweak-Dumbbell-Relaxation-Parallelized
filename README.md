@@ -96,6 +96,8 @@ https://arxiv.org/abs/1705.03091
 
 https://arxiv.org/abs/1904.02257
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
 We describe the parallelization scheme here:
 
 -Divide the physical lattice into sublattices with appropriate ghost zones and assign them to unique parallel processes.
