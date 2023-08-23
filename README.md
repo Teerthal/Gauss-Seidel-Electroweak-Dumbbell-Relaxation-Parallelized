@@ -82,9 +82,13 @@ https://arxiv.org/abs/1705.03091
 https://arxiv.org/abs/1904.02257
 
 We describe the parallelization scheme here:
+
 -Divide the physical lattice into sublattices with appropriate ghost zones and assign them to unique parallel processes.
+
 -Compute the first iteration in the first process and communicate with neighboring processes. Then immediately move on to the second iteration.
+
 -The neighboring processes receive the communication and compute the first iteration, immediately followed by them performing the relevant communication, and moving to the second iteration.
+
 -This would be repeated until all the processes are busy. If there are N sublattices(processes) in a single direction, then by the time the Nth process performs the 1st iteration, the 1st process would be performing the Nth iteration.
 
 The advantage of this approach is that once all the processes have been saturated, there will be no free or unused processes until the time when global integration or data collection needs to be performed.
