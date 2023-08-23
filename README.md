@@ -7,6 +7,11 @@ Parallelized Fortran routines to compute the electroweak dumbbell configuration 
 ---------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
+##Comments in the modules:
+- All the field array indexes and covariant derivative array indexes are defined in covariantDerivs.f
+- All the field strength array indexing is defined in fieldStrengths.f
+- Parallel Process Topology notation is explained in processCoord.f and boundaryIndices.f
+
 These routines can fully reproduce the results in https://arxiv.org/abs/2302.04886
 
 The purpose of this numerical suite is to compute the field configuration of the electroweak dumbbell described in the aforementioned article. 
